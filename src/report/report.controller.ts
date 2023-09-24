@@ -49,7 +49,6 @@ export class ReportController {
     @Body() body: updateReportByIdDto,
     @Param('id', ParseUUIDPipe) id: string,
   ): ReportResponseDto {
-    console.log(body);
     return this.reportService.updateReportById(id, body);
   }
 
